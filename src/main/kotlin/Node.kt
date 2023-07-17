@@ -6,15 +6,15 @@ open class Node(
     val value: String = "0",
     val opType: OperatorType = OperatorType.None
 ) {
-    fun print() {
-        print(
-            if (type == Type.Operator)
-                "{$opType}"
-            else if (type == Type.LParent || type == Type.RParent)
-                "{$type}"
-            else "{$type: $value}"
-        )
-    }
+//    fun print() {
+//        print(
+//            when (type) {
+//                Type.Operator -> "{$opType}"
+//                Type.LParent, Type.RParent -> "{$type}"
+//                else -> "{$type: $value}"
+//            }
+//        )
+//    }
 
     fun calc(left: String, right: String): Double {
         return when (opType) {
